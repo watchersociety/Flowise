@@ -18,7 +18,8 @@ const App = () => {
     const customization = useSelector((state) => state.customization)
 
     //set dark mode as default
-    customization.isDarkMode = true
+    // customization.isDarkMode = true
+    // const darkInit = localStorage.getItem('username')
 
     return (
         <StyledEngineProvider injectFirst>

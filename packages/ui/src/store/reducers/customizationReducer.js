@@ -4,13 +4,23 @@ import config from 'config'
 // action - state management
 import * as actionTypes from '../actions'
 
+//set init theme to dark mode if first time, pull from localStorage for previous users
+let darkInit = localStorage.getItem('isDarkMode')
+
+if (darkInit === null) {
+    console.log('DARK', darkInit)
+    darkInit = true
+} else {
+    darkInit = localStorage.getItem('isDarkMode') === 'true' ? true : false
+}
+
 export const initialState = {
     isOpen: [], // for active default menu
     fontFamily: config.fontFamily,
     borderRadius: config.borderRadius,
     opened: true,
     isHorizontal: localStorage.getItem('isHorizontal') === 'true' ? true : false,
-    isDarkMode: localStorage.getItem('isDarkMode') === 'true' ? true : false
+    isDarkMode: darkInit
 }
 
 // ==============================|| CUSTOMIZATION REDUCER ||============================== //

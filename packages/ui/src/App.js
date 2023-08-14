@@ -18,7 +18,7 @@ const App = () => {
     const customization = useSelector((state) => state.customization)
 
     //set dark mode as default
-    customization.isDarkMode = true;
+    customization.isDarkMode = true
 
     return (
         <StyledEngineProvider injectFirst>

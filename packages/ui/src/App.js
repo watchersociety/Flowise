@@ -17,6 +17,9 @@ import NavigationScroll from 'layout/NavigationScroll'
 const App = () => {
     const customization = useSelector((state) => state.customization)
 
+    //set dark mode as default
+    customization.isDarkMode = true;
+
     return (
         <StyledEngineProvider injectFirst>
             <ThemeProvider theme={themes(customization)}>

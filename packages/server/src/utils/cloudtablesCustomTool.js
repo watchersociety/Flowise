@@ -31,7 +31,6 @@ try {
         'dp-18': formattedUtcDate,
         'dp-2': $firstname,
         'dp-3': $lastname,
-        'dp-4': $email,
         'dp-5': strippedPhoneNumber,
         'dp-7': $ageverified,
         'dp-16': $insured,
